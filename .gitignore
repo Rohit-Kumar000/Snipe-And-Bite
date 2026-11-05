@@ -1,0 +1,42 @@
+# Dependencies
+node_modules
+
+# Environment files (secrets, never commit)
+.env
+.env.*
+!.env.example
+*.local
+
+# Build output
+dist
+dist-ssr
+build
+coverage
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.cursor
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Deploy tools
+.vercel
+.render
