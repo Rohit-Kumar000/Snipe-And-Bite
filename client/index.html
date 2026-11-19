@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/rohitk50798/image/upload/v1793374357/favicon.png" />
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/rohitk50798/image/upload/v1793374357/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Order delicious food online from Snipe&Bite. Fast delivery, fresh taste." />
+    <meta name="theme-color" content="#1f1d2b" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      // Applies the saved theme before the first paint so the page never flashes the wrong colours.
+      (function () {
+        try {
+          var saved = localStorage.getItem("sb_theme");
+          var theme = saved === "light" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", theme === "light" ? "#fff8ef" : "#1f1d2b");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Snipe&Bite | Food Delivery Hub</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
